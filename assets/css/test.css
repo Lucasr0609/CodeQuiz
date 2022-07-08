@@ -114,6 +114,9 @@ main, .quiz {
     text-align: left;
 }
 
+#hide {
+    display: none;
+}
 
 .btn:hover {
     cursor: pointer;
@@ -130,7 +133,6 @@ footer {
     width: 100%;
     margin: 0 auto;
     height: 100%;
-    position: fixed;
 }
 
 footer h3 {
