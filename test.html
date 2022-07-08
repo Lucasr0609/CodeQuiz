@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/test.css">
+</head>
+<body>
+    <header id="topheader">
+        <nav>
+            <a href="./HighScore.html">
+                High Score
+            </a>
+        </nav>
+        <h1>Code Quiz</h1>
+        <div>
+            <h2 class="timer">Timer <span id="thecountdown">0</span></h2>
+        </div>
+    </header>
+    <main class="quiz" id="quizcontainers">
+        <!-- quiz container that will display the question and etc-->
+        <div id="quizquestions">
+         <h1>
+            Welcome to Code Quiz good luck!
+         </h1>
+         <p>Try to answer all the questions correctly, due remember that there will be a penalty for every wrong answer(timer will go down by 5</p>
+         <ul id="answerchoices"></ul>    
+        </div>
+        <button id="buttonstart">
+            Start Quiz
+            <!-- this button will start the quiz-->
+        </button>
+
+        <button class="btn" class="hide" id="buttonchoicea">
+            <!-- first answer choice-->
+        </button>
+        
+        <button class="btn" class="hide" id="buttonchoiceb">
+            <!-- second answer choice-->
+        </button>
+
+        <button class="btn" class="hide" id="buttonchoicec">
+            <!-- third answer choice-->
+        </button>
+        
+        <button class="btn" class="hide" id="buttonchoiced">
+            <!-- fourth answer choice-->
+        </button>
+
+        <div class="results" class="hide" id="resultsection">
+            <!-- when getting a wrong answer it will create a <h2> element and say (wrong answer)-->
+            
+        </div>
+    </main>
+    <footer>
+        <h3>Created by Lucas Ramos</h3>
+        <script src="./assets/js/scriptfile.js"></script>
+    </footer>
+</body>
+</html>
