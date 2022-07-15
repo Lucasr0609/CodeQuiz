@@ -45,6 +45,39 @@ main {
     box-shadow: 0 0 10px 2px;
 }
 
+.endscore {
+    color: crimson;
+    font-size: 40px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#endScoreContainer form input{
+    color: crimson;
+    font-size: larger;
+    justify-content: center;
+    display: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#endScoreContainer form button{
+    text-align: center;
+    background-color: rgb(48, 19, 234);
+    font-size: 3rem;
+    color: red;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 7px;
+    margin: 7px;
+    padding: .5rem;
+    outline: none;
+    position: center;
+}
+
+
 #questioncontainer div {
     font-size: 3rem;
     padding: 1rem;
@@ -106,7 +139,6 @@ header nav a {
 
 .results {
     margin-top: 1.5rem;
-    border-top: rgb(17, 192, 192) solid 2px;
     width: 100rem;
     font-style: fantasy;
     color: crimson;

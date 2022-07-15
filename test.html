@@ -15,8 +15,8 @@
             </a>
         </nav>
         <h1>Code Quiz</h1>
-        <div>
-            <h2 class="timer">Timer <span id="thecountdown">0</span></h2>
+        <div class="timercontainer">
+            <h2 class="timer">Timer <span id="thecountdown"></span></h2>
         </div>
     </header>
     <main id="quizcontainers">
@@ -55,6 +55,14 @@
             test
         </div>
     </main>
+
+    <div id="endScoreContainer" class="endscore hide">
+        <form type="text">
+            <input placeholder="Initials here" class="class"></input>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
     <footer>
         <h3>Created by Lucas Ramos</h3>
     </footer>
