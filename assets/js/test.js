@@ -6,7 +6,7 @@ let questionShuffled, currentQuestionInput
 var questionEl = document.getElementById('quizquestions');
 var buttonChoiceA = document.getElementById('answerchoicebuttons')
 var yourscore = document.getElementById('yourscore')
-var initialBox
+var highscore =
 // var buttonChoiceA = document.getElementById('buttonchoicea')
 // var buttonChoiceB = document.getElementById('buttonchoiceb')
 // var buttonChoiceC = document.getElementById('buttonchoicec')
@@ -14,7 +14,7 @@ var initialBox
 // varibles end
 
 // event listeners
-startingQuiz.addEventListener('click', startQuiz)
+startingQuiz.addEventListener('click', startQuiz);
 // event listeners ends
 
 // start game function
@@ -120,6 +120,15 @@ function timerfunction(){
     },1000);
 }
 
-// function codeQuizEnd (){
-//     return startQuiz;
-// }
+var submit = document.querySelector("#submit")
+var initals = document.querySelector("#initals")
+
+
+if (initals === null){
+    console.log('no value was entered');
+} else {
+    var endScore = {
+        initals: initals,
+        score: endScore
+    }
+}
