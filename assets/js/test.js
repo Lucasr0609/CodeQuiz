@@ -6,7 +6,7 @@ let questionShuffled, currentQuestionInput
 var questionEl = document.getElementById('quizquestions');
 var buttonChoiceA = document.getElementById('answerchoicebuttons')
 var yourscore = document.getElementById('yourscore')
-var highscore =
+var resultArea = document.getElementById('resultsection')
 // var buttonChoiceA = document.getElementById('buttonchoicea')
 // var buttonChoiceB = document.getElementById('buttonchoiceb')
 // var buttonChoiceC = document.getElementById('buttonchoicec')
@@ -51,7 +51,8 @@ function nextQuestions () {
 
 // answer function
 function answer(event) {
-    //console.log(event.target.id.split("buttonchoice")[1] == questionLists[currentQuestionInput].correct )
+    var isAnswerCorrect = event.target.id.split("buttonchoice")[1] == questionLists[currentQuestionInput].correct
+    answercorrect(isAnswerCorrect)
     currentQuestionInput++
     nextQuestions()
     return "",
@@ -90,7 +91,7 @@ var questionLists = [
     {
         question: "What is 6 + 1?",
         choices: ["4", "5", "6", "7"],
-        correct: 7
+        correct: 3
     },
 ]; 
 // question array ends here
@@ -99,15 +100,18 @@ var questionLists = [
 //  document.getElementById('yourscore')
 //  interhtml = ('h2') + timer
 // }
-
+var timer = 75
 function timerfunction(){
-    var timer = 75
+    
     var myTimer = setInterval(function(){
         timer--;
         document.getElementById('thecountdown').innerHTML=timer
 
         if(timer <= 0 || currentQuestionInput >= questionLists.length){
             clearInterval(myTimer)
+            var submit = document.querySelector("#submit")
+            
+        
             document.getElementById('quizcontainers').classList.add('hide')
             document.getElementById('endScoreContainer').classList.remove('hide')
             
@@ -116,19 +120,51 @@ function timerfunction(){
             var endScore = document.createElement('p').textContent = "score of " + timer
             endScore.classList = 'endscore'
             endScoreContainer.append(endScore)
+            submit.addEventListener('click', hslocalstorage)
         } 
     },1000);
 }
 
-var submit = document.querySelector("#submit")
-var initals = document.querySelector("#initals")
+function hslocalstorage (event) {
+    event.preventDefault()
+    var gettingLocalStorage = JSON.parse(localStorage.getItem('HighScore'))
+    if (gettingLocalStorage === null){
+        var highScoreArry = [];
+    } else {
+        var highScoreArry = gettingLocalStorage
+    }
+    var initals = document.querySelector("#initals").value.trim()
+    debugger;
+    if (initals === null){
+        console.log('no value was entered');
+    } else {
+        var endScore = {
+            initals: initals,
+            score: timer
+        }
+    }
+    highScoreArry.push(endScore)
+    localStorage.setItem("HighScore", JSON.stringify(highScoreArry))
+    location.replace('./HighScore.html')
+}
 
 
-if (initals === null){
-    console.log('no value was entered');
-} else {
-    var endScore = {
-        initals: initals,
-        score: endScore
+var answercorrect = function (number) {
+    var resultContainer = document.querySelector("#resultsection")
+    console.log(resultContainer.firstChild);
+    // resultContainer.removeChild(resultContainer.firstChild)
+    if (number /*questionLists[currentQuestionInput].correct*/) {
+        console.log("correct answer");
+        var content = document.querySelector("#h2result");
+        content.textContent = "Correct Answer!";
+        content.className = "result";
+        resultContainer.classList.remove('hide')
+    }
+    else {
+        var resultArea = document.querySelector("#h2result");
+        resultArea.textContent = "Wrong Answer!";
+        resultArea.className = "result";
+        resultContainer.classList.remove('hide')
+        timer = timer - 10
     }
 }
