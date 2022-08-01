@@ -5,12 +5,12 @@ When you click the right answer you will be given 5 seconds to your timer.<br />
 When all the questions have been answered you wil be prompted with a input box, submit button and your score<br />
 If you add your initials or even full name and click sobmit you will be sent to the HighScore page<br />
 <br />
-<font size="2"> User Story </font> <br />
+<font size="5"> User Story </font> <br />
 <br />
 AS A coding boot camp student<br />
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores<br />
 SO THAT I can gauge my progress compared to my peers<br />
-<font size="2"> Acceptance Criteria </font><br />
+<font size="5"> Acceptance Criteria </font><br />
 <br />
 GIVEN I am taking a code quiz<br />
 WHEN I click the start button<br />
