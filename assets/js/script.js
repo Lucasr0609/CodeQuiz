@@ -5,7 +5,6 @@ var answerChoice = document.getElementById("answerchoices");
 let questionShuffled, currentQuestionInput
 var questionEl = document.getElementById('quizquestions');
 var buttonChoiceA = document.getElementById('answerchoicebuttons')
-var yourscore = document.getElementById('yourscore')
 var resultArea = document.getElementById('resultsection')
 // var buttonChoiceA = document.getElementById('buttonchoicea')
 // var buttonChoiceB = document.getElementById('buttonchoiceb')
@@ -79,27 +78,58 @@ function selectingAnswers () {
 //questions array starts here
 var questionLists = [
     {
-        question: "What is 2 + 2?",
-        choices: ["4", "5", "6", "7"],
+        question: 'How do you call a function named "highScore"?',
+        choices: ["highScore()", "call{highScore}", "return = highScore;", "highScore{}"],
         correct: 0
     },
     {
-        question: "What is 3 + 3?",
-        choices: ["4", "5", "6", "7"],
+        question: "Which operator checks for equality plus data type",
+        choices: [" --- ", " == ", " = ", " === "],
+        correct: 3
+    },
+    {
+        question: "How do you write a comment in Javascript",
+        choices: [" //This is a comment ", " `This is a comment` ", " (This is a comment) ", " !--comment-- "],
+        correct: 0
+    },
+    {
+        question: "How is a FOR loop  in Javascript started?",
+        choices: ["for (i <= 5; i++)", "for (i = 0; i <= 5; i++)", "for i = 1 to 5", "for (i = 0; i <= 5)"],
+        correct: 1
+    },
+    {
+        question: "What command is use to debug your code.",
+        choices: ["debug", "console.log()", "debugger;", "//debugger"],
         correct: 2
     },
     {
-        question: "What is 6 + 1?",
-        choices: ["4", "5", "6", "7"],
+        question: "String values are supposed to be enclose within ____ while being assigned to variables.",
+        choices: ["commas", "curly brackets", "parenthesis", "quotes"],
         correct: 3
+    },
+    {
+        question: "When using arrays in Javascript they can be used to store ____.",
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        correct: 3
+    },
+    {
+        question: "What attribute is used in html to decorate content?",
+        choices: ["style", "src", "class", "css"],
+        correct: 0
+    },
+    {
+        question: "What HTML tag is not use inside the head tag",
+        choices: ["meta", "title", "header", "link"],
+        correct: 2
+    },
+    {
+        question: "which Data type is not commonly used.",
+        choices: ["booleans", "alerts", "strings", "numbers"],
+        correct: 1
     },
 ]; 
 // question array ends here
 
-// function score (yourscore) {
-//  document.getElementById('yourscore')
-//  interhtml = ('h2') + timer
-// }
 var timer = 75
 function timerfunction(){
     
@@ -134,7 +164,6 @@ function hslocalstorage (event) {
         var highScoreArry = gettingLocalStorage
     }
     var initals = document.querySelector("#initals").value.trim()
-    debugger;
     if (initals === null){
         console.log('no value was entered');
     } else {
@@ -159,6 +188,7 @@ var answercorrect = function (number) {
         content.textContent = "Correct Answer!";
         content.className = "result";
         resultContainer.classList.remove('hide')
+        timer = timer + 5
     }
     else {
         var resultArea = document.querySelector("#h2result");

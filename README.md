@@ -1,6 +1,9 @@
 # CodeQuiz
-when I click start quiz I will be prompted with the first question and answer choices.
-code is still in working proggress.
+when I click start quiz I will be prompted with the first question and answer choices.<br />
+When you click wrong answer it will deducted 10 seconds from your time,<br />
+When you click the right answer you will be given 5 seconds to your timer.<br />
+When all the questions have been answered you wil be prompted with a input box, submit button and your score<br />
+If you add your initials or even full name and click sobmit you will be sent to the HighScore page<br />
 #User Story <br />
 AS A coding boot camp student<br />
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores<br />

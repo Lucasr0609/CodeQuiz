@@ -1,5 +1,4 @@
 function HighScore () {
-    debugger;
     var scoreResult = JSON.parse(localStorage.getItem('HighScore'))
     for (var i = 0 ; i < scoreResult.length; i++){
     var container = document.querySelector('#score')
