@@ -4,12 +4,14 @@ When you click wrong answer it will deducted 10 seconds from your time,<br />
 When you click the right answer you will be given 5 seconds to your timer.<br />
 When all the questions have been answered you wil be prompted with a input box, submit button and your score<br />
 If you add your initials or even full name and click sobmit you will be sent to the HighScore page<br />
-#User Story <br />
+<br />
+# User Story <br />
+<br />
 AS A coding boot camp student<br />
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores<br />
-SO THAT I can gauge my progress compared to my peers
-
-#Acceptance Criteria<br />
+SO THAT I can gauge my progress compared to my peers<br />
+# Acceptance Criteria<br />
+<br />
 GIVEN I am taking a code quiz<br />
 WHEN I click the start button<br />
 THEN a timer starts and I am presented with a question<br />
