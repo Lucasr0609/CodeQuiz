@@ -25,11 +25,11 @@ THEN the game is over<br />
 WHEN the game is over<br />
 THEN I can save my initials and score
 
-https://lucasr0609.github.io/CodeQuiz/HighScore.html
-https://github.com/Lucasr0609/CodeQuiz
+https://lucasr0609.github.io/CodeQuiz/HighScore.html <br />
+https://github.com/Lucasr0609/CodeQuiz<br />
 https://github.com/Lucasr0609
 
-<img src="./assets/images/127.0.0.1_5500_HighScore.html.png">
-<img src="./assets/images/127.0.0.1_5500_index.html.png">
 <img src="./assets/images/127.0.0.1_5500_test.html_ (1).png">
+<img src="./assets/images/127.0.0.1_5500_index.html.png">
 <img src="./assets/images/127.0.0.1_5500_test.html_ (2).png">
+<img src="./assets/images/127.0.0.1_5500_HighScore.html.png">
